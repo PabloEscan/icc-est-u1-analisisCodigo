@@ -115,7 +115,7 @@ public class MetodosOrdenamiento {
     // Método de selección con errores
     // Error encontrado: El metodo falla al momento de intercambiar los elementos, en este caso
     // debemos en la linea int smallerNumber = arreglo[indiceMinimo], luego arreglo[indiceMinimo] = arreglo[i],
-    // y para terminar arreglo[i] = smallerNumber;
+    // y para terminar arreglo[i] = smallerNumber.
 
     public int[] seleccionTercero(int[] arregloOriginal) {
         int[] arreglo = Arrays.copyOf(arregloOriginal, arregloOriginal.length);
