@@ -41,3 +41,19 @@ class MetodosOrdenamiento:
             if i != iM:
                 arreglo[i], arreglo[iM] = arreglo[iM], arreglo[i]
         return arreglo
+
+    def sort_shell(self, array):
+        arreglo = array.copy()
+        n = len(arreglo)
+        gap = n // 2
+
+        while gap > 0:
+            for i in range(gap, n):
+                temp = arreglo[i]
+                j = i
+                while j >= gap and arreglo[j - gap] > temp:
+                    arreglo[j] = arreglo[j - gap]
+                    j -= gap
+                arreglo[j] = temp
+            gap //= 2
+        return arreglo

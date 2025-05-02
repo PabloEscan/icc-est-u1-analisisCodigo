@@ -3,42 +3,55 @@ import random
 import time
 
 class Benchmarking:
+    def medir_tiempo(self, funcion, arreglo):
+        inicio = time.perf_counter()
+        funcion(arreglo)
+        fin = time.perf_counter()
+        return fin - inicio
 
+
+
+
+
+
+
+
+    ##Practica anterior
     #Constructor
-    def __init__(self):
-        print("Benchmarking instanciado")
-        self.mO = MetodosOrdenamiento()
+    # def __init__(self):
+        # print("Benchmarking instanciado")
+        # self.mO = MetodosOrdenamiento()
 
-        arreglo = self.build_arreglo(10000)
+        # arreglo = self.build_arreglo(10000)
         
         #lambda en base es ()->
         #Burbuja
-        tarea_burbuja = lambda: self.mO.sort_burbble(arreglo)
+        # tarea_burbuja = lambda: self.mO.sort_burbble(arreglo)
 
-        current_miles = self.contar_con_current_time_milles(tarea_burbuja)
-        nano_times = self.contar_con_nano_time(tarea_burbuja)
+        # current_miles = self.contar_con_current_time_milles(tarea_burbuja)
+        # nano_times = self.contar_con_nano_time(tarea_burbuja)
 
-        print(f"Tiempo con mili segundos (bubble sort): {current_miles}")
-        print(f"Tiempo con nano segundos (bubble sort): {nano_times}")
+        # print(f"Tiempo con mili segundos (bubble sort): {current_miles}")
+        # print(f"Tiempo con nano segundos (bubble sort): {nano_times}")
 
         #Burbuja mejorado
-        tarea_burbuja_mejorado = lambda: self.mO.sort_burbuja_mejorado_optimizado(arreglo)
+        # tarea_burbuja_mejorado = lambda: self.mO.sort_burbuja_mejorado_optimizado(arreglo)
 
-        current_miles = self.contar_con_current_time_milles(tarea_burbuja_mejorado)
-        nano_times = self.contar_con_nano_time(tarea_burbuja_mejorado)
+        # current_miles = self.contar_con_current_time_milles(tarea_burbuja_mejorado)
+        # nano_times = self.contar_con_nano_time(tarea_burbuja_mejorado)
 
-        print(f"Tiempo con mili segundos (bubble sort mejorado): {current_miles}")
-        print(f"Tiempo con nano segundos (bubble sort mejorado): {nano_times}")
+        # print(f"Tiempo con mili segundos (bubble sort mejorado): {current_miles}")
+        # print(f"Tiempo con nano segundos (bubble sort mejorado): {nano_times}")
 
         #Seleccion
-        tarea_seleccion = lambda: self.mO.sort_seleccion(arreglo)
+        # tarea_seleccion = lambda: self.mO.sort_seleccion(arreglo)
 
-        current_miles = self.contar_con_current_time_milles(tarea_seleccion)
-        nano_times = self.contar_con_nano_time(tarea_seleccion)
 
-        print(f"Tiempo con mili segundos (selection sort): {current_miles}")
-        print(f"Tiempo con nano segundos (selection sort): {nano_times}")
+        # current_miles = self.contar_con_current_time_milles(tarea_seleccion)
+        # nano_times = self.contar_con_nano_time(tarea_seleccion)
 
+        # print(f"Tiempo con mili segundos (selection sort): {current_miles}")
+        # print(f"Tiempo con nano segundos (selection sort): {nano_times}")
 
     def build_arreglo(self, tamano):
         arreglo = []
